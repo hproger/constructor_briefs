@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 250px 600px;
+  grid-template-rows: auto;
+  grid-template-areas:
+          "formControls formElements"
+          ". saveButton";
+  
+}
+.targetBLock{
+  width: 600px;
+  height: 300px;
+  border: 1px dashed #cfcfcf;
+  grid-area: formElements;
+}
+
+.draggable-component {
+  width: 40%;
+  height: 50px;
+  background-color: bisque;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.draggable-components {
+  grid-area: formControls;
+  background-color: #cfcfcf;
+}
+
+.green {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+}
+.red {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
+.yellow {
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+}
+
+.form-field-wrap {
+  position: relative;
+}
+.field-handle{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.form-field .body input,
+.form-field .body textarea,
+.form-field .body select{
+  background: #fcfcfc;
+  padding: 0 9px;
+  border: 1px solid silver;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 210px;
+}
+
+.form-field .body textarea {
+  resize: none;
+  background: #fcfcfc;
+  border: 1px solid silver;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 13px;
+  box-shadow: none;
+  height: auto;
+}
